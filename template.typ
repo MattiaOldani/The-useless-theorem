@@ -9,7 +9,7 @@
 
   set text(font: "New Computer Modern", lang: "it")
 
-  set heading(numbering: "1.1")
+  set heading(numbering: "1.")
 
   show math.equation: set text(weight: 400)
   show math.equation: set block(spacing: 0.65em)

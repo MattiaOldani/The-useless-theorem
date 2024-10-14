@@ -210,7 +210,7 @@
   namefmt: emph,
   bodyfmt: proof-bodyfmt,
   ..args.named(),
-).with(numbering: none)
+)
 
 
 #let thmrules(qed-symbol: $qed$, doc) = {
@@ -285,29 +285,29 @@
   "teorema",
   "Teorema",
   fill: rgb("#fadadd"),
-).with(numbering: none)
+)
 
 #let corollary = thmbox(
   "corollario",
   "Corollario",
   base: "teorema",
   fill: rgb("#fadadd"),
-).with(numbering: none)
+)
 
 #let lemma = thmbox(
   "lemma",
   "Lemma",
   fill: rgb("#fadadd"),
-).with(numbering: none)
+)
 
 // #let example = thmbox(
 //   "esempio",
 //   "Esempio",
 //   fill: rgb("#daf1fa"),
-// ).with(numbering: none)
+// )
 
 #let proof = thmproof(
   "dimostrazione",
   "Dimostrazione",
   fill: rgb("#eeffee"),
-).with(numbering: none)
+)
