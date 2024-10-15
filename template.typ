@@ -55,7 +55,7 @@
   )
 
   line(length: 100%, stroke: 2pt)
-  v(24pt)
+  v(18pt)
 
   set par(justify: true)
   set text(hyphenate: false)

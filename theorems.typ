@@ -287,24 +287,11 @@
   fill: rgb("#fadadd"),
 )
 
-#let corollary = thmbox(
-  "corollario",
-  "Corollario",
-  base: "teorema",
-  fill: rgb("#fadadd"),
-)
-
 #let lemma = thmbox(
   "lemma",
   "Lemma",
   fill: rgb("#fadadd"),
 )
-
-// #let example = thmbox(
-//   "esempio",
-//   "Esempio",
-//   fill: rgb("#daf1fa"),
-// )
 
 #let proof = thmproof(
   "dimostrazione",
