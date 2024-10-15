@@ -1,3 +1,3 @@
-# Il mio teorema
+# Il teorema inutile
 
-Dopo 12 anni ce l'ho fatta.
+Il teorema più inutile dopo l'ultimo teorema di Fermat, ma almeno l'ho scritto io.
