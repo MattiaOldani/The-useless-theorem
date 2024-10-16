@@ -5,8 +5,7 @@
 #show: project.with(
   title: "Teorema inutile, ma non per me",
   author: "Oldani Mattia",
-  abstract: [A $12$ anni ero affascinato dal numero $99$, ultimo numero prima di andare in tripla cifra. Sarà che avevo un telefonino che, come tutti i telefonini fanno, mostrano le ore con dei numeri a due cifre. Sarà che mi chiedevo spesso come cercare di raggiungere $99$ con le ore e i minuti segnati sullo schermo. Sarà la passione pura e cristallina che ancora oggi ho nei confronti della matematica. Non lo so, ma è lì che la mia mente malsana ha prodotto quello che oggi è uno dei teoremi più inutili della storia, quasi al livello dell'ultimo teorema di Fermat, ma almeno io, il mio, non l'ho fatto dimostrare a qualcun'altro $300$ anni dopo.],
-  date: datetime.today().display("[day]-[month]-[year]"),
+  abstract: [A $12$ anni ero affascinato dal numero $99$, ultimo numero prima di andare in tripla cifra. Sarà che avevo un telefono che, come tutti i telefoni fanno, mostrano le ore con dei numeri a due cifre. Sarà che mi chiedevo spesso come cercare di raggiungere $99$ con le ore e i minuti segnati sullo schermo. Sarà la passione pura e cristallina che ancora oggi ho nei confronti della matematica. Non lo so, ma è lì che la mia mente malsana ha prodotto quello che oggi è uno dei teoremi più inutili della storia, quasi al livello dell'ultimo teorema di Fermat, ma almeno io, il mio, non l'ho fatto dimostrare a qualcun'altro $300$ anni dopo.],
 )
 
 
@@ -55,7 +54,7 @@ Vediamo prima due lemmi che mi hanno aiutato enormemente nella dimostrazione del
 
   Come passo induttivo sia $n > 2$ un numero pari, quindi lo possiamo scrivere come $ n = 2k bar.v k > 1 and k in NN . $
 
-  Riscriviamo $n$ come $ n = 2k = underbracket(2 + dots.c + 2, k) $ e quindi riscriviamo $10^n$, grazie alle proprietà delle potenze, come $ 10^n = 10^(2 + dots.c + 2) = underbracket(10^2 dot dots.c dot 10^2, k) . $
+  Per prima cosa riscriviamo $n$ come $ n = 2k = underbracket(2 + dots.c + 2, k) . $ Possiamo ora riscrivere $10^n$, grazie alle proprietà delle potenze, come $ 10^n = 10^(2 + dots.c + 2) = underbracket(10^2 dot dots.c dot 10^2, k) . $
 
   Grazie al caso base sappiamo che $10^2 equiv 1 mod 99$, quindi $ 10^n = 10^2 dot dots.c dot 10^2 equiv underbracket(1 dot dots.c dot 1, k) = 1 mod 99 . qedhere $
 ]
@@ -73,14 +72,14 @@ Vediamo prima due lemmi che mi hanno aiutato enormemente nella dimostrazione del
 
   Come passo induttivo sia $n > 1$ un numero dispari, quindi lo possiamo scrivere come $ n = 2k + 1 bar.v k > 1 and k in NN . $
 
-  Riscriviamo $n$ come $ n = 2k + 1 = underbracket(2 + dots.c + 2, k) + 1 $ e quindi riscriviamo $10^n$, grazie alle proprietà delle potenze, come $ 10^n = 10^(2 + dots.c + 2 + 1) = underbracket(10^2 dot dots.c dot 10^2, k) dot 10 . $
+  Per prima cosa riscriviamo $n$ come $ n = 2k + 1 = underbracket(2 + dots.c + 2, k) + 1 . $ Possiamo ora riscrivere $10^n$, grazie alle proprietà delle potenze, come $ 10^n = 10^(2 + dots.c + 2 + 1) = underbracket(10^2 dot dots.c dot 10^2, k) dot 10 . $
 
   Grazie al @lemma-pari sappiamo che $10^2 equiv 1 mod 99$ e grazie al caso base sappiamo che $10^1 equiv 10 mod 99$, quindi $ 10^n = 10^2 dot dots.c dot 10^2 dot 10 equiv underbracket(1 dot dots.c dot 1, k) dot 10 = 10 mod 99 . qedhere $
 ]
 
 = Teorema ruspante
 
-Con il @lemma-pari e il @lemma-dispari ora siamo pronti per dimostrare il risultato principale di questo report esotico.
+Con il @lemma-pari e il @lemma-dispari ora siamo pronti per dimostrare il risultato principale di questo fantastico report.
 
 #theorem()[
   Sia $x = x_(n-1) x_(n-2) dots.c x_1 x_0$ un numero naturale di $n$ cifre. Allora vale $ [10 dot (sum_(i = 1)^(n-1) x_i) + x_0 equiv 9 dot (sum_(i=1)^(floor(n slash 2)) x_(2i)) + x] mod 99 . $
@@ -110,9 +109,9 @@ Con il @lemma-pari e il @lemma-dispari ora siamo pronti per dimostrare il risult
 
 = Altra proprietà esotica
 
-Questo teorema totalmente inutile non è l'unica proprietà interessante della congruenza modulo $99$: ne esiste una seconda, che però, secondo me, è meno *WOW* del teorema proposto.
+Questo teorema totalmente inutile non è l'unico risultato interessante che ho trovato per la congruenza modulo $99$: ne esiste un secondo, che però non analizzeremo a fondo perché non sono capace a fare le dimostrazioni, RIP.
 
-La seconda proprietà che andiamo ad analizzare riguarda il calcolo esotico che possiamo fare quando eseguiamo un modulo $99$. Vedremo due algoritmi che vanno entrambi a calcolare un numero modulo $99$ in maniera semplice e particolare, ma solo il primo verrà analizzato.
+Analizzeremo due modi per calcolare, in modo bizzarro, un numero modulo $99$. Vedremo quindi due algoritmi che calcolano un numero modulo $99$ con un workflow particolare, ma solo il primo verrà presentato nella sua interezza.
 
 #figure(
   kind: "algorithm",
@@ -164,6 +163,6 @@ Non ho voglia di dimostrare che questo algoritmo è corretto per il calcolo di $
 
 = Conclusioni
 
-Questo report non è fatto per essere serio, o almeno, non del tutto. Ci sono dimostrazioni molto formali e dimostrazioni un po' tirate per i capelli, però perdonatemi, mi sono ritirato da matematica. Ci sono frasi sgrammaticate (_Vittorio perdonami_) e frasi degne di Petrarca. Ci sono alcuni easter egg nascosti. È presente un po' di tutto.
+Questo report non è fatto per essere serio, o almeno, non del tutto. Ci sono dimostrazioni molto formali e dimostrazioni un po' tirate per i capelli, però perdonatemi, mi sono ritirato da matematica. Ci sono frasi ben formate (_FBF_) e frasi totalmente sgrammaticate (_Vittorio perdonami tvb_). È presente un po' di tutto.
 
-Questo report è assolutamente inutile e non dovrebbe essere letto e studiato da nessuno, ma dopo $12$ anni quel bambino di prima media ha avuto la sua conferma: non era autistico che sparava proprietà ab cazzum, ma quello che pensava oggi è vero, dimostrato, e sapere che questa cosa l'ho trovata a $12$ anni mi fa sentire un pelo speciale e soprattutto ancora più innamorato di questa scienza fantastica.
+Resta il fatto che questo report è assolutamente inutile e non dovrebbe essere letto e studiato da nessuno, ma dopo $12$ anni, quel bambino di prima media ha avuto la sua conferma: non era autistico che sparava proprietà ab cazzum, ma quello che aveva formulato oggi è vero, dimostrato, e sapere che questa cosa l'ho trovata a $12$ anni mi fa esplodere il cervello, nel senso buono.

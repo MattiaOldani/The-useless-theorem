@@ -1,8 +1,8 @@
-#let project(title: "", abstract: [], author: "", date: none, body) = {
+#let project(title: "", abstract: [], author: "", body) = {
   set document(author: author, title: title)
 
   set page(
-    margin: (left: 25mm, right: 25mm, top: 25mm, bottom: 30mm),
+    margin: (left: 25mm, right: 25mm, top: 25mm, bottom: 25mm),
     numbering: "1",
     number-align: center,
   )
@@ -11,16 +11,13 @@
 
   set heading(numbering: "1.")
 
-  show math.equation: set text(weight: 400)
-  show math.equation: set block(spacing: 0.65em)
-
   line(length: 100%, stroke: 2pt)
 
   pad(
     bottom: 4pt,
     top: 4pt,
     align(center)[
-      #block(text(weight: 500, 1.75em, title))
+      #block(text(1.75em, title))
       #v(1em, weak: true)
     ],
   )
@@ -31,11 +28,11 @@
     top: 0.5em,
     x: 2em,
     align(center)[
-      #block(text(weight: 500, 1.25em, author))
+      #block(text(1.25em, author))
     ],
   )
 
-  align(center)[#date]
+  align(center)[#datetime.today().display("[day]-[month]-[year]")]
 
   pad(
     x: 3em,
@@ -45,7 +42,7 @@
       #heading(
         outlined: false,
         numbering: none,
-        text(0.85em, smallcaps[Abstract]),
+        text(1em, smallcaps[Abstract]),
       )
       #set par(justify: true)
       #set text(hyphenate: false)
@@ -55,7 +52,7 @@
   )
 
   line(length: 100%, stroke: 2pt)
-  v(18pt)
+  v(12pt)
 
   set par(justify: true)
   set text(hyphenate: false)
